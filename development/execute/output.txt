@@ -1,0 +1,130 @@
+OFICINA ESPAÑOLA DE
+PATENTES Y MARCAS
+
+ESPAÑA
+
+(DN.> de publicación: ES 2 037 817
+(6D Int. C1.5: F16C 9/04
+F16C 9/02
+
+(2) @TAB@TRADUCCION DE PATENTE EUROPEA @TAB@T3
+
+(69) Número de solicitud europea:
+Fecha de presentación :
+87 Número de publicación de la solicitud: 87) Fecha de publicación de la solicitud:
+
+88201810.4
+
+25.08.88
+
+0 307 028
+15.03.89
+
+Título: Cojinetes.
+
+Prioridad: 05.09.87 GB 8720915
+
+Fecha de la publicación de la mención BOPl:
+
+01.07.93
+
+Fecha de la publicación del folleto de patente:
+
+01.07.93
+
+(3) Titular/es:
+
+Société Industrielle des Coussinets SA
+4, rue de la Liberté BP. No. 73 F-74009 Annecy Cedex, FR
+
+(22) Inventor/es: Gojon, Roger Leon
+
+(4) Agente: Díez de Rivera y Hoces, Alfonso
+
+Aviso:
+
+En el plazo de nueve meses a contar desde la fecha de publicación en el Boletín europeo de patentes,
+
+de la mención de concesión de la patente europea, cualquier persona podrá oponerse ante la Oficina
+
+Europea de Patentes a la patente concedida.
+
+La oposición deberá formularse por escrito y estar
+
+motivada; sólo se considerará como formulada una vez que se haya realizado el pago de la tasa de oposición (art" 99,1 del Convenio sobre concesión de Patentes Europeas).
+
+Venta de fascículos: Oficina Española de Patentes y Marcas. C/Panamá, 1 — 28036 Madrid
+
+DESCRIPCION
+
+La presente invención se refiere a los cojinetes, y en especial a los cojinetes para motores de combustión interna.
+
+Los cojinetes para los muñones principales del árbol cigueñal y para las muñequillas correspondientes a los extremos grandes de las bielas constan generalmente de dos mitades. Cada mitad comprende un material de cojinete con respaldo de acero, que puede tener también, depositada sobre el mismo, una delgada capa de un segundo material de cojinete. El segundo material, referido con frecuencia como capa superpuesta, está normalmente electrodepositado y comprende una
+aleación blanda a base de plomo o estaño.
+
+Estas capas superpuestas se emplean normalmente en motores de alta velocidad para mejorar la resistencia del cojinete a la fatiga y al agarrotamiento. También sirven en algunos materiales subyacentes de los cojinetes para impedir su corrosión.
+
+Debido al elevado costo de los cojinetes con capas superpuestas, su empleo está justificado sólo en la mitad en la que las cargas son mayores y, por ello, es más delgada la película de aceite. Las cargas en el otro medio cojinete son muy inferiores y debidas principalmente a cargas de inercia y no a las de combustión. Estas cargas no originan condiciones de agarrotamiento ni daños por fatiga.
+
+Un cojinete que consta de dos mitades no similares está descrito en la memoria descriptiva de la patente francesa n? FR-A-2555264 y también el "Offenlegungss -chrift" alemán n? DE-A-2723585. Tal como se describe en esta última publicación, para una muñequilla correspondiente al extremo grande de biela, la mitad superior del cojinete, adyacente a la biela, está sometida a la carga mayor, mientras que para un muñón principal, es la mitad inferior del cojinete, adyacente a la tapa del cojinete, la que está sometida a la carga mayor.
+
+Aunque las capas superpuestas mejoran el rendimiento del cojinete, al ser blandas las aleaciones que se emplean, tienden a desgastarse rápidamente cuando están en contacto con el cigúeñal. Una vez desgastada completamente la capa superpuesta, son afectadas de modo perjudicial tanto la resistencia al agarrotamiento como posiblemente la resistencia a la corrosión.
+
+El solo aumento del espesor de la capa superpuesta para dar mayor capacidad de desgaste queda limitado, a causa de reducirse la resistencia a la fatiga por el mayor espesor.
+
+Con un cigueñal recién mecanizado, el desgaste se produce por la aspereza relativamente alta del muñón o muñequilla ferroso, mucho más duro, del cigueñal. @TAB@La aspereza del muñón o muñequilla del cigueñal no disminuye por su contacto con el material de la capa superpuesta.
+
+Se ha observado, sin embargo, que una vez que la capa superpuesta se ha desgastado completamente y el muñón o muñequilla se pone en contacto con el material subyacente del cojinete, la asperaza del cigúeñal se reduce rápidamente.
+
+También se ha observado que si estos cojinetes desgastados se sustituyen por cojinetes nuevos con capa superpuesta, el ritmo de desgaste de la
+
+capa superpuesta de los nuevos cojinetes queda muy reducido. Es claro que el desmontar un motor y sustituir los cojinetes no es deseable ni practicable por medio para prolongar la duración de un juego (el siguiente) de cojinetes.
+
+Este efecto se ha observado y estudiado también, tal como se comunica en un artículo de Fukoka, Kato y Kamiya, extractado de "Studies of Engine Bearings and Lubrication SP 539" (estudio de cojinetes y lubricación de motores), publicado por la "Society of Automotive Engineers" (Sociedad de Ingenieros de Automoción), febrero 1983, titulado "cojinetes de aleación de aluminio que contienen partículas duras, aptos para su empleo con árboles de hierro colado nodular".
+
+Este artículo describe un cojinete para muñón de árbol, en el que todas las superficies deslizantes constan de una aleación a base de aluminio que contiene, entre otras cosas, partículas de silicio, cuyo efecto dice ser un pulido abrasivo del muñón del árbol, después de lo cual las superficies deslizantes trabajan de modo clásico y parecen ofrecer una mejora sobre las superficies deslizantes clásicas, tengan o no éstas una capa superpuesta adicional.
+
+Esto concuerda con las características obser-
+vadas del efecto perjudicial de la aspereza de la superficie del muñón del árbol. Sin embargo, entre los ingenieros hay cierta resistencia a abandonar los tipos de cojinetes conocidos y bien entendidos, que tienen capas superpuestas, por un nuevo material.
+
+Es un objetivo de la presente invención crear un cojinete de muñón que reduzca la aspereza del muñón del árbol y, en consecuencia, reduzca el ritmo de desgaste de las capas superpuestas.
+
+Según la presente invención, un cojinete de muñón o muñequilla comprende dos mitades de cojinete dispuestas para circundar un muñón o muñequilla de árbol, teniendo una y otra superficies deslizantes no similares, y está caracterizado porque una mitad de cojinete, en la posición con relación al árbol en la que soporta la mayor carga del cojinete, está provista de una capa superpuesta como superficie deslizante, y la otra mitad del cojinete, en la posición con relación al árbol en la que soporta la menor carga del cojinete, tiene una superficie deslizante que consta de una aleación que contiene silicio, que puede actuar para realizar, por el deslizamiento del árbol con relación a la misma, un pulido abrasivo del muñón o muñequilla del árbol para reducir el ritmo de desgaste del material de la capa superpuesta de dicha una mitad de cojinete por el muñón o muñequilla del árbol.
+
+Se ha visto que las aleaciones de cojinete a base de aluminio que contienen silicio son especialmente ventajosas para su empleo en la mitad que no tiene capa superpuesta. Una composición de las mismas es, en peso %, 11 de estaño, 4 de silicio, 2 de cobre y el resto, aluminio.
+
+No obstante, como se han observado los autores del artículo de la mencionada Sociedad de
+Ingenieros de Automoción, una superficie deslizante clásicamente circular del cojinete sí produce un efecto de pulido del árbol, y también se ha observado que es ventajoso perfilar la superficie de la otra mitad, que no tiene capa superpuesta, de modo que se reduzca la capacidad de empuje hidrodinámico de la mitad de cojinete durante un período inicial, proveyendo la superficie deslizante de pequeñas desviaciones de la semicircularidad en forma de una serie de crestas y cavidades en la dirección del deslizamiento del árbol con relación
+a la superficie del cojinete, actuando las crestas al principio para reducir localmente en las mismas el espesor de la película de aceite del cojinete y favorecer el contacto abrasivo entre la superficie deslizante de la mitad del cojinete y el muñón o muñequilla del árbol, produciendo a la vez el pulido del árbol por la superficie deslizante y la erosión de las crestas de la superficie deslizante del cojinete por el árbol a fin de restablecer un espacio de película de aceite entre la mitad de cojinete y el muñón o muñequilla del árbol para el deslizamiento siguiente.
+
+Las cavidades y crestas pueden estar separadas entre sí de 5 a 15 mm, con una desviación del cilindro perfecto de 1 a 5 micrómetros de profundidad. El efecto de un tal perfil es reducir el espesor de la película de aceite y favorecer inicialmente el contacto entre el árbol y las partes de la superficie de la mitad que no tiene capa superpuesta. Después de un período de marcha del motor relativamente corto, las propias crestas han quedado desgastadas, produciéndose una forma
+semicilíndrica casi perfecta que permite obtener un espesor máximo de la película de aceite. En esta etapa, la aspereza del muñón o muñequilla del árbol se ha pulido hasta un bajo nivel, menos abrasivo. Las desviaciones de la semicircularidad
+pueden adoptar muchas formas, tales como, por ejemplo, lóbulos que tengan perfiles graduales o sinusoidales.
+
+Con objeto de que se entienda más a fondo la presente invención, se va a describir ahora un ejemplo, sólo como ilustración, con referencia al
+
+dibujo que se acompaña, que muestra un corte en alzado de un cojinete de muñequilla del extremo grande de una biela.
+
+Con referencia ahora al dibujo, en el que un conjunto de cojinete de muñequilla del extremo grande de una biela está indicado globalmente por 10, el conjunto comprende una parte 11 y una tapa 12 de la biela, una mitad superior 13 del cojinete y la otra mitad inferior 14 del cojinete. La muñequilla del árbol está representada en 15. La mitad superior 13 consta de un respaldo de acero 16, un revestimiento de cojinete 17 que comprende una aleación cobre-plomo, y una capa superpuesta 18 que comprende plomo y 10 de estaño (todas las composiciones están en peso %) y un espesor de aproximadamente 25 micrómetros. La mitad inferior 14 consta también
+de un respaldo de acero que tiene un revestimiento de una aleación de cojinete 21 de composición de aluminio con 11 de estaño, 4 de silicio y 2 de cobre. La superficie de la aleación 21 está, además, perfilada con una serie de cavidades y crestas 22 que tienen una longitud de onda de repetición de aproximadamente 10 mm con una profundidad de 2 micrómetros.
+
+En funcionamiento, el efecto de las cavidades y crestas 22 consiste en reducir el espesor de la película de aceite en la mitad 14 y permitir el contacto entre las cimas de las crestas y la superficie de la muñequilla del árbol, acelerando así el pulido de ésta. Simultáneamente, las propias cimas de las crestas se desgastan, dejando un perfil suave en la mitad 14, restableciéndose de este modo el espesor de la película de aceite deseado y asegurando una larga duración en servicio.
+
+Se pueden emplear muchas más aleaciones para los diversos materiales de cojinete arriba especificados, y no debe considerarse limitada por ello la invención.
+
+REIVINDICACIONES
+
+1. Un cojinete de muñón o muñequilla que comprende dos mitades de cojinete (13, 14) dispuestas para circundar un muñón o muñequilla (15) de árbol, teniendo una y otra superficies deslizantes no similares, caracterizado porque una mitad de cojinete (13), en la posición con relación al árbol en la que soporta la mayor carga del cojinete, está provista de una capa superpuesta (18) como superficie deslizante, y la otra mitad de cojinete (14), en la posición con relación al árbol en la que soporta la menor carga del cojinete, tiene una superficie deslizante (21) que consta de una aleación que contiene silicio, que puede acbuar para realizar, por el deslizamiento del árbol con relación a la misma, un pulido abrasivo del muñón o muñequilla del árbol (12) y reducir el ritmo de desgaste del material de la capa superpuesta de dicha una mitad de cojinete (13) por el muñón o muñequilla (15) del árbol.
+
+2. Un cojinete como el de la reivindicación 1?, caracterizado por una composición de la superficie de deslizamiento (21) de dicha otra mitad de cojinete que no tiene capa superpuesta, de un peso % de 11 de estaño, 4 de silicio, 2 de cobre y el resto aluminio.
+
+3. Un cojinete como el de la reivindicación 1% o la 2%, caracterizado porque la superficie de deslizamiento (21) de la otra mitad de cojinete que no tiene capa superpuesta, está perfilada con una serie de crestas y cavidades (21, 22) en la dirección del deslizamiento del árbol con relación a
+la superficie del cojinete, actuando las crestas al
+
+principo para reducir localmente en la misma el espesor de la película de aceite de cojinete y favorecer el contacto entre la superficie deslizante de la mitad de cojinete y el muñón o muñequilla del árbol, y producir tanto el pulido del árbol por la superficie deslizante como la erosión de las crestas de la superficie deslizante del cojinete por el árbol, para restablecer un espacio de película de aceite entre la mitad de cojinete y el muñón o muñequilla del árbol para un siguiente deslizamiento.
+
+4. Un cojinete como el de la reivindicación 12 o la 22, caracterizado porque la superficie deslizante (21) de la otra mitad de cojinete que no tiene capa superpuesta, está perfilada con una serie de lóbulos que tienen perfil gradual o sinusoidal en la dirección del deslizamiento del árbol
+con relación a la superficie del cojinete, actuando los lóbulos al principio para reducir localmente en la misma el espesor de la película de aceite de cojinete y favorecer el contacto entre la superfice deslizante de la mitad de cojinete y el muñón o muñequilla del árbol, y producir tanto el pulido del árbol por la superficie deslizante como la erosión de los lóbulos de la superficie deslizante del cojinete por el árbol, para restablecer un espacio de película de aceite entre la mitad de cojinete y el muñón o muñequilla del árbol para un siguiente deslizamiento.
+
+5. Un conjunto como el de la reivindicación 4% caracterizado porque la longitud de onda de la repetición de los lóbulos es de 5 a 15 mm, y la profundidad de los puntos bajos respecto a los altos es inicialmente de 1 a 5 micrómetros.
+
