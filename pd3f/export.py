@@ -325,6 +325,8 @@ class Export:
         # only do if footnootes are reordered
         self.footnotes_last and self.remove_hyphens and self.doc.reverse_page_break()
 
+        self.doc.reverse_paragraph()
+
     def add_linebreak(
         self, line, next_line, text_line, text_next_line, paragraph, num_lines
     ):
@@ -360,6 +362,14 @@ class Export:
                 logger.debug(f"No next line, but adding space {text_line}")
                 return False
 
+        lastword = text_line[-1]
+        lastword = lastword.strip()
+        firstword = text_next_line[0]
+        firstword = firstword.strip()
+        if (lastword[-1] == '-') or (lastword[-1] == ',') or (firstword[0].islower()):
+            #print("Case 3.1 end with -")
+            return False
+
         if available_space >= next_line["content"][0]["box"]["w"]:
             logger.debug(
                 f"There is enough space on the lext for the next word. So adding a linebreak between {text_line}{text_next_line}"
@@ -386,12 +396,24 @@ class Export:
 
     def line_to_words(self, line):
         words, fonts = [], []
+        prev_right = 0
+
         for word in line["content"]:
+            istab = False
             if word["type"] == "word":
+                box = word["box"]
+                if prev_right != 0:
+                    space = box["l"] - prev_right
+                    if space > self.info.median_word_space * 3.25:
+                        istab=True
                 w_fixed = word["content"]
                 w_fixed = fix_bad_unicode(w_fixed).strip()
-                words.append(w_fixed)
+                if istab:
+                    words.append("@TAB@"+w_fixed)
+                else:
+                    words.append(w_fixed)
                 fonts.append(word["font"])
+                prev_right = word["box"]["l"] + word["box"]["w"]
         return words, fonts
 
     def lines_to_paragraph(self, paragraph, idx_page, test_footnote):
@@ -419,6 +441,7 @@ class Export:
                     logger.debug(f"removing {rl} because not alpha num")
                     lines.append(None)
 
+
         lines = LinesWithNone(lines, raw_lines)
 
         # NB: the returned paragraph can be None (invalid)
@@ -429,6 +452,7 @@ class Export:
             paragraph, font_counter, idx_page, lines
         ):
             # don't test on last line
+            #print("case 1: ")
             for i in list(lines)[:-1]:
                 # decide whether newline or simple space
                 if self.add_linebreak(
@@ -460,6 +484,7 @@ class Export:
             return Element("footnotes", lines.valid, paragraph["id"], idx_page=idx_page)
         else:
             # ordinary paragraph
+            #print("case 2: ")
             num_newlines = 0
             ends_newline = False
             # don't test on last line
@@ -486,9 +511,12 @@ class Export:
 
             # finally remove Nones here
             lines = lines.valid
+            #print("lines 3: ", lines)
 
             if self.remove_hyphens:
+                #print("dehyphen START:")
                 lines = dehyphen_paragraph(lines, lang=self.lang)
+                #print("lines 4: ", lines)
 
             return Element(
                 "body",
@@ -537,9 +565,11 @@ class Export:
             return False
 
         # if the previous element ends with `:` it expects something, so it can't be the last paragraph
+        # print("self.info.order_page[idx_page]: ", self.info.order_page[idx_page])
         if len(self.info.order_page[idx_page]) > 1:
             prev_elem = self.info.id_to_elem[self.info.order_page[idx_page][-2]]
             prev_elem_words, _ = self.line_to_words(prev_elem["content"][-1])
+            # print("prev_elem_words[-1]==", prev_elem_words[-1])
             if prev_elem_words[-1].endswith(":"):
                 logger.debug(f"Id of cur para: {paragraph['id']}")
                 logger.debug(

@@ -76,10 +76,11 @@ class DocumentOutput:
 
             # It cannot contain newlines
             if last_element.ends_newline:
-                logger.debug(
-                    f"the last element has ends with a newline. Do not try to join with the next one."
-                )
-                continue
+                last_element[-1][-1] = last_element[-1][-1].strip()
+                #print(
+                #   f"the last element has ends with a newline. Do not try to join with the next one."
+                #)
+                #continue
 
             fixed = is_split_paragraph(last_element, next_element, self.lang)
             if fixed is None:
@@ -93,6 +94,52 @@ class DocumentOutput:
             self[self.data.index(last_element)] = fixed
             self.data.remove(next_element)
             self.merged_elements[next_element.id] = last_element.id
+
+    def reverse_paragraph(self):
+        """join paragraphs that were split between pages
+
+        gets complicated when footnotes are not re-ordered
+        """
+        for idx, page in enumerate(self.order):
+            #print(f"reversing reverse_paragraph break page #{idx}")
+
+            para = 0;
+            prevparagraph = ""
+            nextparagraph = ""
+            for ele_id in self.order[idx]:
+                ele = self.get_element(ele_id)
+                if ele is None:
+                    continue
+                if ele.type in ("body"):
+                    para += 1;
+
+                    if para > 1:
+                        nextparagraph = ele
+                        #print(para, "::::nextparagraph:::", nextparagraph)
+                        #print(para, "::::prevparagraph:::", prevparagraph)
+                        firstword = nextparagraph[0]
+                        firstword = firstword[0].strip()
+                        #if (len(firstword) > 0) and ((firstword[0].islower()) or (firstword[0].isnumeric())):
+                        if (len(firstword) > 0) and (firstword[0].islower()):
+                            #print("****Start Call is_split_paragraph")
+                            fixed = is_split_paragraph(prevparagraph, nextparagraph, self.lang)
+                            if fixed is None:
+                                #print("looks like a split paragraph")
+                                prevparagraph = ele
+                                continue
+                            else:
+                                ele = fixed
+                                #print("Join Paragraph::::::::::::::;")
+                                # set new paragraph
+                                self[self.data.index(prevparagraph)] = fixed
+                                self.data.remove(nextparagraph)
+                                self.merged_elements[nextparagraph.id] = prevparagraph.id
+                                #print(fixed)
+                        #else:
+                            #print("looks like a split paragraph")
+                    prevparagraph = ele
+
+
 
     def reorder_footnotes(self):
         new_data, all_footsnotes = [], []

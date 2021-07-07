@@ -30,7 +30,11 @@ def avg_word_space(line):
         return 0
 
     margins = [calc_margins(i, w) for i, w in enumerate(line["content"])]
-    return sum(margins) / len(margins)
+
+    if len(margins) <= 1:
+        return sum(margins)
+    else:
+        return sum(margins) / (len(margins) -1)
 
 
 def roughly_same_font(f1, f2):
@@ -180,6 +184,14 @@ def calc_line_space(lines):
             lineheights.append(x)
     return lineheights
 
+def calc_word_space(lines):
+    if len(lines) <= 1:
+        return []
+    wordspace = []
+    for i, _ in enumerate(lines):
+        if (x := avg_word_space(lines[i])) is not None:
+            wordspace.append(x)
+    return wordspace
 
 class DocumentInfo:
     def __init__(self, input_data) -> None:
@@ -201,6 +213,7 @@ class DocumentInfo:
         self.counter_height = Counter()
         self.counter_lineheight = Counter()
         self.counter_line_left = Counter()
+        self.counter_space_words = Counter()
 
         for n_page, p in enumerate(self.input_data["pages"]):
             for e in p["elements"]:
@@ -213,6 +226,7 @@ class DocumentInfo:
                 self.counter_height.update([x["box"]["h"] for x in lis])
                 self.counter_lineheight.update(calc_line_space(lis))
                 self.counter_line_left.update([x["box"]["l"] for x in lis])
+                self.counter_space_words.update(calc_word_space(lis))
 
         if (
             min(
@@ -223,6 +237,7 @@ class DocumentInfo:
                         self.counter_height,
                         self.counter_lineheight,
                         self.counter_line_left,
+                        self.counter_space_words
                     ],
                 )
             )
@@ -233,10 +248,11 @@ class DocumentInfo:
             )
 
         self.median_line_width = median_from_counter(self.counter_width)
-        self.median_line_height = median_from_counter(self.counter_height)
+        self.median_line_height = median_from_counter(self.counter_height)*1.2
         # line space: line height
-        self.median_line_space = median_from_counter(self.counter_lineheight)
+        self.median_line_space = median_from_counter(self.counter_lineheight)*1.2
         self.median_line_left = median_from_counter(self.counter_line_left)
+        self.median_word_space =  median_from_counter(self.counter_space_words)
 
         logger.info(f"media line width: {self.median_line_width}")
         logger.info(f"median line height: {self.median_line_height}")
@@ -244,6 +260,8 @@ class DocumentInfo:
         logger.info(f"counter width: {self.counter_width.most_common(5)}")
         logger.info(f"counter height: {self.counter_height.most_common(5)}")
         logger.info(f"counter lineheight: {self.counter_lineheight.most_common(5)}")
+        # print(f"counter counter_space_words: {self.counter_space_words.most_common(5)}")
+        # print("median_word_space===", self.median_word_space)
 
     def document_font_stats(self):
         """Get statistics about font usage in the document
@@ -265,7 +283,7 @@ class DocumentInfo:
             self.font_info[x["id"]] = x
             assert x["sizeUnit"] == "px"
 
-    def seperate_lines(self, l1, l2, factor=0.5):
+    def seperate_lines(self, l1, l2, factor=0.75):
         lh = get_lineheight(l1, l2)
         if lh is None:
             return False
