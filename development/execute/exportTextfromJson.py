@@ -1,9 +1,11 @@
+
 import json
 from pd3f.export import Export
 from os import listdir
 from os.path import isfile, join
 import os
 import argparse
+import datetime
 
 def extractText(inputfilepath, outputfilepath):
 
@@ -23,26 +25,34 @@ def extractText(inputfilepath, outputfilepath):
     else:
         raise Exception("Input file path does not exist")
 
-    print(onlyfiles)
+#    print(onlyfiles)
     for f in onlyfiles:
         if f.endswith('.json'):
-            try:
-                file_path = inputfilepath + "/" + f
-                print(file_path)
-                fileJson = open(file_path)
-                data = json.load(fileJson)
+            name = os.path.splitext(f)[0]
+            o = outputdr + "/"  + name + '.txt'
+            if os.path.isfile(o):
+                print("File Already Exist:",  o)
+            else:
+                try:
+                    file_path = inputfilepath + "/" + f
+                    print("Start:::", datetime.datetime.now(), ":::", file_path)
+                    fileJson = open(file_path)
+                    data = json.load(fileJson)
 
-                e = Export(data, seperate_header_footer=True, footnotes_last=True,
-                           remove_page_number=True, lang='es', fast=False)
+                    e = Export(data, seperate_header_footer=True, footnotes_last=True,
+                               remove_page_number=True, lang='es', fast=False)
 
-                f = os.path.splitext(f)[0]
-                o = outputdr + "/"  + f + '.txt'
-                print(o)
-                with open(o, 'w', encoding='utf-8') as f:
-                    f.write(e.text())
+                    f = os.path.splitext(f)[0]
+                    o = outputdr + "/"  + f + '.txt'
+                    # print(o)
+                    with open(o, 'w', encoding='utf-8') as f:
+                        f.write(e.text())
+                    print("Done:::", datetime.datetime.now(), ":::", o)
 
-            except:
-                print("Anexception  occurred")
+                except Exception as e:
+                    print("Oops!", e.__class__, "occurred.")
+                    print(e)
+                    print("Anexception  occurred")
 
 parser = argparse.ArgumentParser(description='Command line tool for sentence joining decisions.')
 parser.add_argument('--input', help='Input file or directory of json')
@@ -58,4 +68,3 @@ if not args.output:
 # inputpath = '/home/ramoslee/work/EPOOPS/vahalla/PDFPatents/ES-1993/output-json/ES-2032299-T3-13.json'
 # outputpath = '/home/ramoslee/work/EPOOPS/vahalla/PDFPatents/ES-1993/output-text-pd3f/'
 extractText(inputfilepath=args.input, outputfilepath=args.output)
-

@@ -397,6 +397,11 @@ class Export:
     def line_to_words(self, line):
         words, fonts = [], []
         prev_right = 0
+        treshold1 = 60;
+        if self.info.median_word_space >= 17:
+            treshold1 = self.info.median_word_space * 3.25
+        else:
+            treshold1 = 60
 
         for word in line["content"]:
             istab = False
@@ -404,7 +409,9 @@ class Export:
                 box = word["box"]
                 if prev_right != 0:
                     space = box["l"] - prev_right
-                    if space > self.info.median_word_space * 3.25:
+
+                    # if space > self.info.median_word_space * 4.25:
+                    if space > treshold1:
                         istab=True
                 w_fixed = word["content"]
                 w_fixed = fix_bad_unicode(w_fixed).strip()
