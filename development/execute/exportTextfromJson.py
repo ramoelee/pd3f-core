@@ -54,7 +54,7 @@ def extractText(inputfilepath, outputfilepath):
                     print(e)
                     print("Anexception  occurred")
 
-parser = argparse.ArgumentParser(description='Command line tool for sentence joining decisions.')
+parser = argparse.ArgumentParser(description='Command line tool for Export Text.')
 parser.add_argument('--input', help='Input file or directory of json')
 parser.add_argument('--output', help='Output directory')
 args = parser.parse_args()
