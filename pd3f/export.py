@@ -366,7 +366,7 @@ class Export:
         lastword = lastword.strip()
         firstword = text_next_line[0]
         firstword = firstword.strip()
-        if (lastword[-1] == '-') or (lastword[-1] == ',') or (firstword[0].islower()):
+        if (lastword and (lastword[-1] == '-' or lastword[-1] == ',')) or (firstword and firstword[0].islower()):
             #print("Case 3.1 end with -")
             return False
 
